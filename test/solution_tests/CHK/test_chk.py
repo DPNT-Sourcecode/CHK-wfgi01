@@ -29,3 +29,6 @@ class TestChk(unittest.TestCase):
 
     def test_chk_1_A_1_B_3_E(self):
         assert checkout_solution.checkout('ABEEE') == 230
+
+    def test_chk_2_E(self):
+        assert checkout_solution.checkout('EE') == 80
