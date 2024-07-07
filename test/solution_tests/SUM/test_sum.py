@@ -9,4 +9,3 @@ class TestSum(unittest.TestCase):
     def test_sum_arg(self):
         with self.assertRaises(TypeError):
             sum_solution.compute(1)
-

@@ -5,4 +5,3 @@ def compute(x, y):
         return sum
     except TypeError:
         print("TypeError: Provide two positive integer")
-
