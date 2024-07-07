@@ -13,10 +13,10 @@ class TestChk(unittest.TestCase):
         assert checkout_solution.checkout('AAA') == 130
 
     def test_chk_5A(self):
-        assert checkout_solution.checkout('AAA') == 200
+        assert checkout_solution.checkout('AAAAA') == 200
 
     def test_chk_6A(self):
-        assert checkout_solution.checkout('AAA') == 250
+        assert checkout_solution.checkout('AAAAAA') == 250
 
     def test_chk_illegal_item(self):
         assert checkout_solution.checkout('G') == -1
