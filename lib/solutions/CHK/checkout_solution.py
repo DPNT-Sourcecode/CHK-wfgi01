@@ -37,9 +37,9 @@ def checkout(skus):
         '2V': 90,
         '3V': 130,
         'W': 20,
-        'X': 90,
-        'Y': 10,
-        'Z': 50
+        'X': 17,
+        'Y': 20,
+        'Z': 21
     }
     basket = {}
     result = 0
@@ -123,3 +123,4 @@ def checkout(skus):
             result += v * items[k]
 
     return result
+
