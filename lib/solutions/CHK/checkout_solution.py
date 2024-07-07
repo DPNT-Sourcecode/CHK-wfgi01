@@ -3,7 +3,14 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    items = {'A', 'B', 'C', 'D', 'E', 'F'}
+    items = {
+        'A': 50,
+        'B': 30,
+        'C': 20,
+        'D': 15,
+        'E': 40,
+        'F': 10
+    }
     basket = {}
     result = 0
 
@@ -30,25 +37,25 @@ def checkout(skus):
                 rem = v % 5
                 result += (rem // 3) * 130
                 rem1 = rem % 3
-                result += rem1 * 50
+                result += rem1 * items['A']
             else:
-                result += v * 50
+                result += v * items['A']
         elif k == 'B':
-            print(basket)
-            print(v)
             if v >= 2:
-                result += ((v // 2) * 45) + ((v % 2) * 30)
+                result += ((v // 2) * 45) + ((v % 2) * items['B'])
             else:
-                result += v * 30
+                result += v * items['B']
         elif k == 'C':
-            result += v * 20
+            result += v * items['C']
         elif k == 'D':
-            result += v * 15
+            result += v * items['D']
         elif k == 'E':
-            result += v * 40
-
+            result += v * items['E']
+        elif k == 'F':
+            result += v * items['F']
 
     return result
+
 
 
 
