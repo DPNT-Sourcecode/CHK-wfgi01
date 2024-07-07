@@ -3,15 +3,35 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    d = {
-        'A': 50,
-        'B': 30,
-        'C': 20,
-        'D': 15,
-        '3A': 130,
-        '2B': 45
-    }
-    for i in skus:
+    items = {'A', 'B', 'C', 'D'}
+    basket = {}
+    result = 0
 
+    for i in skus:
+        if i in items:
+            if i not in basket:
+                basket[i] = 1
+            else:
+                basket[i] += 1
+        else:
+            return -1
+
+    for k, v in basket.items():
+        if k == 'A':
+            if v >= 3:
+                result += (v // 3) * 130 + (v % 3) * 50
+            else:
+                result += v * 50
+        elif k == 'B':
+            if v >= 2:
+                result += (v // 2) * 45 + (v % 2) * 30
+            else:
+                result += v * 30
+        elif k == 'C':
+            result += v * 20
+        elif k == 'D':
+            result += v * 15
+
+    return result
 
 
