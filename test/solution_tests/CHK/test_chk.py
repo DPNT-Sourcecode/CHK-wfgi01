@@ -9,19 +9,19 @@ class TestChk(unittest.TestCase):
     def test_chk_1_A_1_B(self):
         assert checkout_solution.checkout('AB') == 80
 
-    def test_chk_3A(self):
+    def test_chk_3_A(self):
         assert checkout_solution.checkout('AAA') == 130
 
-    def test_chk_5A(self):
+    def test_chk_5_A(self):
         assert checkout_solution.checkout('AAAAA') == 200
 
-    def test_chk_6A(self):
+    def test_chk_6_A(self):
         assert checkout_solution.checkout('AAAAAA') == 250
 
-    def test_chk_8A(self):
+    def test_chk_8_A(self):
         assert checkout_solution.checkout('AAAAAAAA') == 330
 
-    def test_chk_9A(self):
+    def test_chk_9_A(self):
         assert checkout_solution.checkout('AAAAAAAAA') == 380
 
     def test_chk_illegal_item(self):
@@ -38,3 +38,9 @@ class TestChk(unittest.TestCase):
 
     def test_chk_2_E(self):
         assert checkout_solution.checkout('EE') == 80
+
+    def test_chk_2_F(self):
+        assert checkout_solution.checkout('FF') == 20
+
+    def test_chk_3_F(self):
+        assert checkout_solution.checkout('FFF') == 20

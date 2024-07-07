@@ -3,7 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    items = {'A', 'B', 'C', 'D', 'E'}
+    items = {'A', 'B', 'C', 'D', 'E', 'F'}
     basket = {}
     result = 0
 
