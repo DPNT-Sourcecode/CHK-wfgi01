@@ -12,7 +12,34 @@ def checkout(skus):
         'C': 20,
         'D': 15,
         'E': 40,
-        'F': 10
+        'F': 10,
+        'G': 20,
+        'H': 10,
+        '5H': 45,
+        '10H': 80,
+        'I': 35,
+        'J': 60,
+        'K': 80,
+        '2K': 150,
+        'L': 90,
+        'M': 15,
+        'N': 40,
+        'O': 10,
+        'P': 50,
+        '5P': 200,
+        'Q': 30,
+        '3Q': 80,
+        'R': 50,
+        'S': 30,
+        'T': 20,
+        'U': 40,
+        'V': 50,
+        '2V': 90,
+        '3V': 130,
+        'W': 20,
+        'X': 90,
+        'Y': 10,
+        'Z': 50
     }
     basket = {}
     result = 0
@@ -51,13 +78,8 @@ def checkout(skus):
                 result += ((v // 2) * items['2B']) + ((v % 2) * items['B'])
             else:
                 result += v * items['B']
-        elif k == 'C':
-            result += v * items['C']
-        elif k == 'D':
-            result += v * items['D']
-        elif k == 'E':
-            result += v * items['E']
-        elif k == 'F':
-            result += v * items['F']
+        else:
+            result += v * items[k]
 
     return result
+
