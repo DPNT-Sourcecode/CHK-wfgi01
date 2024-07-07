@@ -32,7 +32,7 @@ def checkout(skus):
                 basket['B'] -= (basket['E'] // 2)
 
     if 'F' in basket:
-        if basket['F'] >= 2:
+        if basket['F'] > 2:
             basket['F'] -= (basket['F'] // 2)
 
 
@@ -61,6 +61,7 @@ def checkout(skus):
             result += v * items['F']
 
     return result
+
 
 
 
