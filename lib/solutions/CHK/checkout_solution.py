@@ -26,6 +26,11 @@ def checkout(skus):
                 result += rem1 * 50
             else:
                 result += v * 50
+        elif k == 'E':
+            if v >= 2:
+                if 'B' in basket:
+                    basket['B'] -= ((v // 2) / 2)
+            result += v * 40
         elif k == 'B':
             if v >= 2:
                 result += ((v // 2) * 45) + ((v % 2) * 30)
@@ -35,11 +40,7 @@ def checkout(skus):
             result += v * 20
         elif k == 'D':
             result += v * 15
-        elif k == 'E':
-            if v >= 2:
-                if 'B' in basket:
-                    result -= ((v // 2) * 30)
-            result += v * 40
 
 
     return result
+
