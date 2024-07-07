@@ -62,6 +62,10 @@ def checkout(skus):
         if basket['F'] >= 3:
             basket['F'] -= (basket['F'] // 3)
 
+    if 'N' in basket:
+        if basket['N'] >= 3:
+            if 'M' in basket:
+                basket['M'] -= (basket['N'] // 3)
 
     for k, v in basket.items():
         if k == 'A':
@@ -91,3 +95,4 @@ def checkout(skus):
             result += v * items[k]
 
     return result
+
