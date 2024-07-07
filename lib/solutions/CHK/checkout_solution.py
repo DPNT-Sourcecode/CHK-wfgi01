@@ -70,7 +70,7 @@ def checkout(skus):
     if 'R' in basket:
         if basket['R'] >= 3:
             if 'Q' in basket:
-                basket['R'] -= (basket['R'] // 3)
+                basket['Q'] -= (basket['R'] // 3)
 
     if 'U' in basket:
         if basket['U'] >= 4:
@@ -123,6 +123,7 @@ def checkout(skus):
             result += v * items[k]
 
     return result
+
 
 
 
