@@ -42,6 +42,7 @@ def checkout(skus):
         'Z': 21,
         'offer': 45 # represents buy any 3 of (S,T,X,Y,Z) for 45
     }
+    offer = {'S', 'T', 'X', 'Y', 'Z'}
     basket = {}
     result = 0
 
@@ -129,6 +130,7 @@ def checkout(skus):
             result += v * items[k]
 
     return result
+
 
 
 
