@@ -19,7 +19,7 @@ def checkout(skus):
     for k, v in basket.items():
         if k == 'A':
             if v >= 3:
-                result += ((v // 3) * 130) + ((v % 3) * 50)
+                result += min(((v // 3) * 130), ((v // 5) * 200)) + ((v % 3) * 50)
             else:
                 result += v * 50
         elif k == 'B':
@@ -39,5 +39,6 @@ def checkout(skus):
 
 
     return result
+
 
 
