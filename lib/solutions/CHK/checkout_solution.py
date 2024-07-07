@@ -70,13 +70,13 @@ def checkout(skus):
     for k, v in basket.items():
         if k == 'A':
             if v >= 3:
-                result += (v // 5) * items['5A']
+                result += (v // 5) * items['5'+k]
                 rem = v % 5
-                result += (rem // 3) * items['3A']
+                result += (rem // 3) * items['3'+k]
                 rem1 = rem % 3
-                result += rem1 * items['A']
+                result += rem1 * items[k]
             else:
-                result += v * items['A']
+                result += v * items[k]
         elif k in ('B', 'K'):
             if v >= 2:
                 result += ((v // 2) * items['2'+k]) + ((v % 2) * items[k])
@@ -84,15 +84,21 @@ def checkout(skus):
                 result += v * items[k]
         elif k == 'H':
             if v >= 5:
-                result += (v // 10) * items['10H']
+                result += (v // 10) * items['10'+k]
                 rem = v % 10
-                result += (rem // 5) * items['5H']
+                result += (rem // 5) * items['5'+k]
                 rem1 = v % 5
-                result += rem1 * items['H']
+                result += rem1 * items[k]
             else:
-                result += v * items['H']
+                result += v * items[k]
+        elif k == 'P':
+            if v >= 5:
+                result += ((v // 5) * items['5'+k]) + ((v % 5) * items[k])
+            else:
+                result += v * items[k]
         else:
             result += v * items[k]
 
     return result
+
 
