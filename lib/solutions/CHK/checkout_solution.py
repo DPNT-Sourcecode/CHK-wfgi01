@@ -111,7 +111,7 @@ def checkout(skus):
             else:
                 result += v * items[k]
         elif k == 'V':
-            if v >= 3:
+            if v >= 2:
                 result += (v // 3) * items['3'+k]
                 rem = v % 3
                 result += (rem // 2) * items['2'+k]
@@ -123,6 +123,7 @@ def checkout(skus):
             result += v * items[k]
 
     return result
+
 
 
 
