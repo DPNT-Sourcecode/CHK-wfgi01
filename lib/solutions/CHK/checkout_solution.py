@@ -18,12 +18,12 @@ def checkout(skus):
 
     for k, v in basket.items():
         if k == 'A':
-            if v % 3 != 0:
+            if v >= 3:
                 result += ((v // 3) * 130) + ((v % 3) * 50)
             else:
                 result += v * 50
         elif k == 'B':
-            if v % 2 != 0:
+            if v >= 2:
                 result += ((v // 2) * 45) + ((v % 2) * 30)
             else:
                 result += v * 30
@@ -32,11 +32,12 @@ def checkout(skus):
         elif k == 'D':
             result += v * 15
         elif k == 'E':
-            if v % 2 == 0:
+            if v >= 2:
                 result += ((v // 2) * 30) + (v * 40)
             else:
                 result += v * 40
 
 
     return result
+
 
