@@ -123,10 +123,3 @@ def checkout(skus):
             result += v * items[k]
 
     return result
-
-
-
-
-
-
-

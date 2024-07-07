@@ -77,4 +77,3 @@ class TestChk(unittest.TestCase):
 
     def test_chk_4_V(self):
         assert checkout_solution.checkout('VVVV') == 180
-
