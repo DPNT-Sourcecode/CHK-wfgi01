@@ -33,9 +33,9 @@ def checkout(skus):
             result += v * 15
         elif k == 'E':
             if v >= 2:
-                result += ((v // 2) * 30) + (v * 40)
-            else:
-                result += v * 40
+                if 'B' in basket:
+                    result -= ((v // 2) * 30)
+            result += v * 40
 
 
     return result
