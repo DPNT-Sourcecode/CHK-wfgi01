@@ -25,7 +25,7 @@ class TestChk(unittest.TestCase):
         assert checkout_solution.checkout('AAAAAAAAA') == 380
 
     def test_chk_illegal_item(self):
-        assert checkout_solution.checkout('G') == -1
+        assert checkout_solution.checkout('#') == -1
 
     def test_chk_1_A_1_B_1_E(self):
         assert checkout_solution.checkout('ABE') == 120
@@ -50,3 +50,4 @@ class TestChk(unittest.TestCase):
 
     def test_chk_6_F(self):
         assert checkout_solution.checkout('FFFFFF') == 40
+
