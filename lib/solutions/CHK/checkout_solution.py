@@ -96,7 +96,7 @@ def checkout(skus):
                 result += (v // 10) * items['10'+k]
                 rem = v % 10
                 result += (rem // 5) * items['5'+k]
-                rem1 = v % 5
+                rem1 = rem % 5
                 result += rem1 * items[k]
             else:
                 result += v * items[k]
@@ -115,7 +115,7 @@ def checkout(skus):
                 result += (v // 3) * items['3'+k]
                 rem = v % 3
                 result += (rem // 2) * items['2'+k]
-                rem1 = v % 2
+                rem1 = rem % 2
                 result += rem1 * items[k]
             else:
                 result += v * items[k]
@@ -123,6 +123,7 @@ def checkout(skus):
             result += v * items[k]
 
     return result
+
 
 
 
