@@ -61,10 +61,3 @@ def checkout(skus):
             result += v * items['F']
 
     return result
-
-
-
-
-
-
-
