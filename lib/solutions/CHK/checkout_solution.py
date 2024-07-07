@@ -33,5 +33,3 @@ def checkout(skus):
             result += v * 15
 
     return result
-
-
