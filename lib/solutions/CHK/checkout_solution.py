@@ -39,7 +39,8 @@ def checkout(skus):
         'W': 20,
         'X': 17,
         'Y': 20,
-        'Z': 21
+        'Z': 21,
+        'offer': 45 # represents buy any 3 of (S,T,X,Y,Z) for 45
     }
     basket = {}
     result = 0
@@ -119,9 +120,15 @@ def checkout(skus):
                 result += rem1 * items[k]
             else:
                 result += v * items[k]
+        elif k in ('S', 'T', 'X', 'Y', 'Z'):
+            if v >= 3:
+                result += ((v // 3) * items['offer']) + ((v % 3) * items['offer'])
+            else:
+                result += v * items[k]
         else:
             result += v * items[k]
 
     return result
+
 
 
