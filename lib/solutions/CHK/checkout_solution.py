@@ -78,6 +78,15 @@ def checkout(skus):
                 result += ((v // 2) * items['2B']) + ((v % 2) * items['B'])
             else:
                 result += v * items['B']
+        elif k == 'H':
+            if v >= 5:
+                result += (v // 10) * items['10H']
+                rem = v % 10
+                result += (v // 5) * items['5H']
+                rem1 = v % 5
+                result += rem1 + items['H']
+            else:
+                result += v * items['H']
         else:
             result += v * items[k]
 
