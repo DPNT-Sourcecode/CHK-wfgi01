@@ -31,5 +31,11 @@ def checkout(skus):
             result += v * 20
         elif k == 'D':
             result += v * 15
+        elif k == 'E':
+            if v >= 2:
+                result += (v // 2) * 40 + (v % 2) * 30
+            else:
+                result += v * 40
+
 
     return result
