@@ -55,6 +55,13 @@ def checkout(skus):
         else:
             return -1
 
+    # offer count
+    offer_count = 0
+    for o in offer:
+        offer_count += basket[o]
+
+    print(offer_count)
+
     if 'E' in basket:
         if basket['E'] >= 2:
             if 'B' in basket:
@@ -130,7 +137,3 @@ def checkout(skus):
             result += v * items[k]
 
     return result
-
-
-
-
