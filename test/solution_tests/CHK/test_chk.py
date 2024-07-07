@@ -81,5 +81,11 @@ class TestChk(unittest.TestCase):
     def test_chk_3_S(self):
         assert checkout_solution.checkout('SSS') == 45
 
+    def test_chk_1_S_T_X(self):
+        assert checkout_solution.checkout('STX') == 45
+
+    def test_chk_2_S_T_X(self):
+        assert checkout_solution.checkout('STXSTX') == 90
+
 
 
