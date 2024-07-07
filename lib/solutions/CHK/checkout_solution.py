@@ -16,6 +16,8 @@ def checkout(skus):
         else:
             return -1
 
+    print(basket['E'])
+
     for k, v in basket.items():
         if k == 'A':
             if v >= 3:
@@ -29,9 +31,13 @@ def checkout(skus):
         elif k == 'E':
             if v >= 2:
                 if 'B' in basket:
-                    basket['B'] -= ((v // 2) / 2)
+                    print(basket)
+                    basket['B'] -= (v // 2)
+                    print(basket)
             result += v * 40
         elif k == 'B':
+            print(basket)
+            print(v)
             if v >= 2:
                 result += ((v // 2) * 45) + ((v % 2) * 30)
             else:
@@ -43,4 +49,5 @@ def checkout(skus):
 
 
     return result
+
 
