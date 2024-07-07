@@ -19,8 +19,8 @@ def checkout(skus):
         '10H': 80,
         'I': 35,
         'J': 60,
-        'K': 80,
-        '2K': 150,
+        'K': 70,
+        '2K': 120,
         'L': 90,
         'M': 15,
         'N': 40,
@@ -30,7 +30,7 @@ def checkout(skus):
         'Q': 30,
         '3Q': 80,
         'R': 50,
-        'S': 30,
+        'S': 20,
         'T': 20,
         'U': 40,
         'V': 50,
@@ -123,4 +123,5 @@ def checkout(skus):
             result += v * items[k]
 
     return result
+
 
